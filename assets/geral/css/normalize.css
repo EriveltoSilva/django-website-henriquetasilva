@@ -424,14 +424,14 @@ Preloader Area CSS
     stroke-dashoffset: 0;
   }
 }
-
+/* #1A76D1; */
 .btn {
 	color: #fff;
 	padding: 13px 25px;
 	font-size: 14px;
 	text-transform: capitalize;
 	font-weight: 500;
-	background: #1A76D1;
+	background: var(--dark-blue-color);
 	position: relative;
 	box-shadow: none;
 	display: inline-block;
@@ -455,7 +455,7 @@ Preloader Area CSS
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: #2C2D3F;
+	background: #1A76D1;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	-webkit-transform-origin: 50%;
@@ -502,11 +502,14 @@ Preloader Area CSS
 	height:100%;
 	width:100%;
 	background:var(--yellow-color);
-	opacity:0.8;
+	opacity:1;
 }
 /*Somente para o que está no arquivo index.html*/
 .index.overlay:before{
 	background:var(--dark-blue-color);
+	/* background:#3F80B5; */
+	/* background:#275587; */
+	/* background:linear-gradient(); */
 }
 /* Bread Crumbs */
 .breadcrumbs {
