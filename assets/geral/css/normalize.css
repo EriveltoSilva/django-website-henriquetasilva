@@ -431,7 +431,8 @@ Preloader Area CSS
 	font-size: 14px;
 	text-transform: capitalize;
 	font-weight: 500;
-	background: var(--dark-blue-color);
+	/* background: var(--dark-blue-color); */
+	background: linear-gradient(45deg,#1A76D1 ,#275587);
 	position: relative;
 	box-shadow: none;
 	display: inline-block;
@@ -506,7 +507,8 @@ Preloader Area CSS
 }
 /*Somente para o que está no arquivo index.html*/
 .index.overlay:before{
-	background:var(--dark-blue-color);
+	/* background:var(--dark-blue-color); */
+    background:linear-gradient(45deg,#1A76D1 ,#275587);
 	/* background:#3F80B5; */
 	/* background:#275587; */
 	/* background:linear-gradient(); */

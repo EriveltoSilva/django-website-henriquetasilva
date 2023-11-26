@@ -3979,7 +3979,8 @@ body{
 .footer .footer-top{
 	padding:100px 0px;
 	position:relative;
-	background:var(--blue-color);
+	/* background:var(--blue-color); */
+	background:linear-gradient(45deg,#1A76D1 ,#275587);
 }
 .footer .footer-top:before{
 	position:absolute;
