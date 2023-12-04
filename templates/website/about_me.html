@@ -1,114 +1,17 @@
-<!doctype html>
-<html lang="pt-ao">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Site keywords here">
-    <meta name="description" content="">
-    <meta name='copyright' content=''>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block metas %}
+	<meta name="keywords" content="Sobre, vida, carreira, Henriqueta, Silva">
+	<meta name="description" content="SObre a Vida de Carreira de Henriqueta Maria Augusto de Sousa da Silva">
+{% endblock %}
 
-    <!-- Title -->
-    <title>Henriqueta Silva | Home</title>
+{% block title%}
+	Sobre mim
+{% endblock%}
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png">
+{% block content %}
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/geral/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/geral/css/main.css">
-    <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="assets/geral/css/nice-select.css">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="assets/geral/css/font-awesome.min.css">
-    <!-- icofont CSS -->
-    <link rel="stylesheet" href="assets/geral/css/icofont.css">
-    <!-- Slicknav -->
-    <link rel="stylesheet" href="assets/geral/css/slicknav.min.css">
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="assets/geral/css/owl-carousel.css">
-    <!-- Datepicker CSS -->
-    <link rel="stylesheet" href="assets/geral/css/datepicker.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/geral/css/animate.min.css">
-    <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="assets/geral/css/magnific-popup.css">
-
-    <!-- Medipro CSS -->
-    <link rel="stylesheet" href="assets/geral/css/normalize.css">
-    <link rel="stylesheet" href="assets/geral/css/style.css">
-    <link rel="stylesheet" href="assets/geral/css/responsive.css">
-    <link rel="stylesheet" href="assets/geral/css/about_me.css">
-
-</head>
-
-<body>
-
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="loader-outter"></div>
-            <div class="loader-inner"></div>
-
-            <div class="indicator">
-                <svg width="16px" height="12px">
-                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                </svg>
-            </div>
-        </div>
-    </div>
-    <!-- End Preloader -->
-
-
-
-    <!-- Header Area -->
-    <header class="header">
-        <!-- Header Inner -->
-        <div class="header-inner">
-            <div class="container">
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-12 d-none">
-                            <!-- Start Logo -->
-                            <div class="logo">
-                                <!-- <a href="index.html"><img src="assets/geral/img/logo.png" alt="#"></a> -->
-                            </div>
-                            <!-- End Logo -->
-                            <!-- Mobile Nav -->
-                            <div class="mobile-nav"></div>
-                            <!-- End Mobile Nav -->
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-12">
-                            <!-- Main Menu -->
-                            <div class="main-menu">
-                                <nav class="navigation">
-                                    <ul class="nav menu">
-                                        <li><a href="index.html"> Home </a></li>
-                                        <li class="active"><a href="about_me.html">Sobre mim</a></li>
-                                        <li><a href="candidacy.html"> Minha Candidatura </a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="news.html">Notícias</a></li>
-                                        <li><a href="contacts.html"> Contactos </a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!--/ End Main Menu -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ End Header Inner -->
-    </header>
-    <!-- End Header Area -->
 
 
     <!-- Breadcrumbs -->
@@ -117,7 +20,7 @@
             <div class="bread-inner">
                 <div class="row d-flex">
                     <div class="col-lg-6 col-12">
-                        <img src="assets/geral/img/thumbnails/thumb-about_me.png" alt="" class="img-fluid">
+                        <img src="{% static 'assets/geral/img/thumbnails/thumb-about_me.png' %}" alt="imagem de Henriqueta Silva lendo" class="img-fluid">
                     </div>
                     <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
                         <h1 class="text-light text-center">Henriqueta Maria Augusto de Sousa da Silva</h1>
@@ -134,7 +37,7 @@
         <!-- SOBRE A CANDIDATA -->
         <div class="row justify-content-center">
             <div class="col-lg-4 col-12">
-                <img src="assets/geral/img/henriqueta.png" alt="">
+                <img src="{% static 'assets/geral/img/henriqueta.png' %}" alt="">
             </div>
             <div class="col-lg-6 col-12 about-p">
                 <h2 class="text-primary">Sobre a Candidata</h2>
@@ -179,16 +82,17 @@
                     contínuo e trabalhando incansavelmente para assegurar que os princípios fundamentais da justiça
                     sejam sempre respeitados.</p>
                 </p>
-                <!-- 
-                        <ul class="text-dark">
-                    <li><strong>Nome completo:</strong> Henriqueta Maria Augusto de Sousa da Silva</li>
-                    <li><strong>Idade:</strong> 57</li>
-                    <li><strong>Estado civil:</strong> Viúva</li>
-                    <li><strong>Profissão:</strong> Advogada</li>
-                    <li><strong>Função atual:</strong> Presidente do conselho provincial de Luanda da OAA</li>
-                    <li><strong>Tempo a desempenhar a função:</strong> 6 anos</li>
-                    <li><strong>Licenciatura em:</strong> Direito na UAN-1993/94</li>
-                </ul> -->
+                    {% comment %}                 
+                    <ul class="text-dark">
+                        <li><strong>Nome completo:</strong> Henriqueta Maria Augusto de Sousa da Silva</li>
+                        <li><strong>Idade:</strong> 57</li>
+                        <li><strong>Estado civil:</strong> Viúva</li>
+                        <li><strong>Profissão:</strong> Advogada</li>
+                        <li><strong>Função atual:</strong> Presidente do conselho provincial de Luanda da OAA</li>
+                        <li><strong>Tempo a desempenhar a função:</strong> 6 anos</li>
+                        <li><strong>Licenciatura em:</strong> Direito na UAN-1993/94</li>
+                    </ul>  
+                {% endcomment %}
             </div>
         </div>
 
@@ -243,7 +147,7 @@
                     e equitativo.
                 </p>
 
-                <!-- <ul class="text-dark">
+                {% comment %} <ul class="text-dark">
                     <li>1995: Gerente do Gabinete jurídico da SUT–Soc. Unif.de Tabacos de Angola, Lda.</li>
                     <li>1995/1996: Estágio de Advocacia, pela Ordem de Advogados de Angola, Luanda</li>
                     <li>1996: Subdirectora do Gabinete Jurídico da SUT – Soc. Unif. de Tabacos de Angola, Lda</li>
@@ -253,10 +157,10 @@
                     <li>2005-2007: Gerente para o Departamento do CORA/LEGAL – Corporate & Regulatory Affairs (British
                         American
                         Tobacco –B.A.T. Angola, Lda)</li>
-                </ul> -->
+                </ul> {% endcomment %}
             </div>
             <div class="col-lg-4 col-12">
-                <img src="assets/geral/img/about-me.png" alt="">
+                <img src="{% static 'assets/geral/img/about-me.png' %}" alt="">
             </div>
         </div>
 
@@ -268,7 +172,7 @@
         <div class="row mt-5 justify-content-center ">
             <div class="col-lg-4 col-12 about-p">
                 <h2 class="text-primary text-center">Em que acredito?</h2>
-                <img src="assets/geral/img/about-me.png" alt="">
+                <img src="{% static 'assets/geral/img/about-me.png' %}" alt="">
             </div>
             <div class="col-lg-6 col-12 about-p">
 
@@ -306,7 +210,7 @@
                     fundamentais. É esta visão que me impulsiona diariamente na advocacia: a busca incessante por uma
                     classe unida, respeitada e comprometida com o bem-estar coletivo.
                 </p>
-                <!-- <ul class="text-dark">
+                {% comment %} <ul class="text-dark">
                     <li>1995: Gerente do Gabinete jurídico da SUT–Soc. Unif.de Tabacos de Angola, Lda.</li>
                     <li>1995/1996: Estágio de Advocacia, pela Ordem de Advogados de Angola, Luanda</li>
                     <li>1996: Subdirectora do Gabinete Jurídico da SUT – Soc. Unif. de Tabacos de Angola, Lda</li>
@@ -316,7 +220,7 @@
                     <li>2005-2007: Gerente para o Departamento do CORA/LEGAL – Corporate & Regulatory Affairs (British
                         American
                         Tobacco –B.A.T. Angola, Lda)</li>
-                </ul> -->
+                </ul> {% endcomment %}
             </div>
 
         </div>
@@ -329,7 +233,7 @@
             <div class="col-lg-6 col-12 about-p">
                 <h2 class="text-primary text-center">Minha Visão</h2>
                 <div class="text-center">
-                    <img src="assets/geral/img/visao.icone.png" alt="" class="">
+                    <img src="{% static 'assets/geral/img/visao.icone.png' %}" alt="imagem representativa de Visão">
                 </div>
                 <p class="text-left">
                     <strong>Ética e Integridade Profissional:</strong> Compromisso inabalável com a ética e a integridade em
@@ -354,7 +258,7 @@
                 <h2 class="text-primary text-center">Minha Missão</h2>
                 <p class="text-left">
                     <div class="text-center">
-                        <img src="assets/geral/img/missao-icone.png" alt="">
+                        <img src="{% static 'assets/geral/img/missao-icone.png' %}" alt="imagem representativa de missão">
                     </div>
                     Busco promover a justiça, defender os direitos fundamentais e contribuir ativamente para uma
                     sociedade mais ética, igualitária e inclusiva, aplicando meus conhecimentos jurídicos em
@@ -369,7 +273,7 @@
             <div class="col-lg-6 col-12 about-p">
                 <div class="text-center">
                     <h2 class="text-primary text-center">Meus Valores</h2>
-                    <img src="assets/geral/img/valores-icone.png" alt="">
+                    <img src="{% static 'assets/geral/img/valores-icone.png' %}" alt="imagem representativa de valores">
                 </div>
                 <p class="text-left">
                     <strong>Ética e Integridade:</strong> Comprometimento inabalável com a ética profissional e a integridade em
@@ -391,107 +295,4 @@
         </div>
     </div>
 
-
-
-
-
-
-
-    <!-- Footer Area -->
-    <footer id="footer" class="footer ">
-        <!-- Footer Top -->
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <div class="single-footer">
-                            <h2>Nossas Midias Socias</h2>
-                            <p>Siga-nos nas redes socias e faça parte da mudança conosco.</p>
-                            <!-- Social -->
-                            <ul class="social">
-                                <li><a target="_blank" href="https://instagram.com/henriqueta_desousa_dasilva?igshid=MzMyNGUyNmU2YQ=="><i class="icofont-instagram"></i></a></li>
-                                <li><a target="_blank" href="https://www.linkedin.com/groups/9545634"><i class="icofont-linkedin"></i></a></li>
-                            </ul>
-                            <!-- End Social -->
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-12">
-                        <div class="single-footer">
-                            <h2>Newsletter</h2>
-                            <p>Esteja actualizado com as nossas actividades mais recentes assinando a nossa mais nova
-                                newsletter.</p>
-
-                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                                <input name="email" placeholder="Insira seu endereço de email..." class="common-input"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'"
-                                    required="" type="email">
-                                <button type="submit" class="button"><i
-                                        class="icofont icofont-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright -->
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
-                        <div class="copyright-content">
-                            <p>© Copyright 2023 | Todos os Direitos Reservados por <a href="#" target="_blank">
-                                    Henriqueta Silva</a> </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ End Copyright -->
-    </footer>
-    <!--/ End Footer Area -->
-
-    <!-- jquery Min JS -->
-    <script src="assets/geral/js/jquery.min.js"></script>
-    <!-- jquery Migrate JS -->
-    <script src="assets/geral/js/jquery-migrate-3.0.0.js"></script>
-    <!-- jquery Ui JS -->
-    <script src="assets/geral/js/jquery-ui.min.js"></script>
-    <!-- Easing JS -->
-    <script src="jassets/geral/s/easing.js"></script>
-    <!-- Color JS -->
-    <script src="assets/geral/js/colors.js"></script>
-    <!-- Popper JS -->
-    <script src="assets/geral/js/popper.min.js"></script>
-    <!-- Bootstrap Datepicker JS -->
-    <script src="assets/geral/js/bootstrap-datepicker.js"></script>
-    <!-- Jquery Nav JS -->
-    <script src="assets/geral/js/jquery.nav.js"></script>
-    <!-- Slicknav JS -->
-    <script src="assets/geral/js/slicknav.min.js"></script>
-    <!-- ScrollUp JS -->
-    <script src="assets/geral/js/jquery.scrollUp.min.js"></script>
-    <!-- Niceselect JS -->
-    <script src="assets/geral/js/niceselect.js"></script>
-    <!-- Tilt Jquery JS -->
-    <script src="assets/geral/js/tilt.jquery.min.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="assets/geral/js/owl-carousel.js"></script>
-    <!-- counterup JS -->
-    <script src="assets/geral/js/jquery.counterup.min.js"></script>
-    <!-- Steller JS -->
-    <script src="assets/geral/js/steller.js"></script>
-    <!-- Wow JS -->
-    <script src="assets/geral/js/wow.min.js"></script>
-    <!-- Magnific Popup JS -->
-    <script src="assets/geral/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up CDN JS -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/geral/js/bootstrap.min.js"></script>
-    <!-- Main JS -->
-    <script src="assets/geral/js/main.js"></script>
-</body>
-
-</html>
+    {% endblock %}
