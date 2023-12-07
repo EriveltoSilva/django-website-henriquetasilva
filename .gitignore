@@ -19,6 +19,9 @@
 # Ignore all local history of files
 .history
 .ionide
+video
+video/
+*.mp4
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
 
