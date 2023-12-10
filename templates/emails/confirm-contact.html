@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<html lang="pt-AO">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="x-apple-disable-message-reformatting">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="telephone=no" name="format-detection">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 100%;
+                height: 100vh;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .wrapper {
+                background-color: #fafafa;
+                color: #333;
+                width: 80%;
+                padding: 38px;
+            }
+
+            .wrapper h1 {
+                color: #275587;
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+                color: #275587;
+            }
+
+            a:hover {
+                color:#1A76D1;
+            }
+
+            p {
+                margin: 10px 0px;
+            }            
+
+            footer{
+                margin-top: 30px;
+            }
+
+            #footer{
+                display: flex;
+                justify-content: space-around;
+                height: 40px;
+            }
+            #footer a{
+                color: #fafafa;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="pb-3 mb-4 border-bottom">
+                <h1>
+                    <a href="http://hss-bastonaria.ao/"> Candidatura Henriqueta Silva  </a>
+                </h1>
+            </header>
+
+            <main>
+                <h2>{{ subject }}</h2>
+
+                <p class ="bg-primary">
+                  Olá Carrissimo! {{ name }} enviou um pedido para entrar em contacto.
+                </p>
+
+                <h3>Dados do contacto Recebidos:</h3>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th colspan="2">Nome</th>
+                      <th colspan="2">Email:</th>
+                      <th colspan="2">Mensagem:</th>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2">{{ name }}</td>
+                      <td colspan="2">{{ email }}</td>
+                      <td colspan="2">{{ message }}</td>
+                    </tr>
+                  </thead>
+                </table>
+            </main>
+
+            <footer>
+                <div id="footer" style="background-color:#275587; color:#fff; width: 100%;">
+                    <div>                        
+                        <a target="_blank" href="https://www.linkedin.com/groups/9545634">
+                            <img title="Linkedin" alt="Conta Linkedin" width="32" src="https://ecbrqaw.stripocdn.email/content/assets/img/social-icons/square-white-bordered/linkedin-square-white-bordered.png">
+                        </a>
+                        
+                        <a target="_blank" href="https://instagram.com/henriqueta_desousa_dasilva?igshid=MzMyNGUyNmU2YQ==">
+                            <img title="Instagram" alt="Instagram" width="32" src="https://ecbrqaw.stripocdn.email/content/assets/img/social-icons/square-white-bordered/instagram-square-white-bordered.png">
+                        </a>
+                    </div>
+                    <div>
+                        <p><a>Advogada Henriqueta Silva</a> </p>
+                    </div> 
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -11,14 +11,24 @@
 {% endblock%}
 
 {% block content %}
-
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{% static 'assets/geral/img/thumbnails/thumb-candidatura.jpg' %}" class="d-block w-100" alt="...">
-            </div>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    {% for image in carrocel %}
+    <div class="carousel-inner">
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="{{ image.image.url }}" class="d-block w-100" alt="{{ image.title }}">
         </div>
     </div>
+    {% endfor %}
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 
     <!-- Motivo da Candidatura -->
@@ -137,3 +147,10 @@
     </section>
 
     {% endblock%}
+    {% block local_script %}
+	<script>
+		window.addEventListener("load", ()=>{
+			document.querySelectorAll(".carousel-item")[0].classList.add("active")
+		})
+	</script>
+{% endblock %}

@@ -19,13 +19,14 @@
 							<!-- Main Menu -->
 							<div class="main-menu">
 								<nav class="navigation">
+									<input type="hidden" id="inputPageName" value="{{page_name}}">
 									<ul class="nav menu">
-										<li class="active"><a href="{% url 'home' %}"> Home </a></li>
-										<li><a href="{% url 'about-me' %}">Sobre mim</a></li>
-										<li><a href="{% url 'candidacy' %}"> Minha Candidatura </a></li>
-										<li><a href="{% url 'faq' %}">FAQ</a></li>
-										<li><a href="{% url 'news' %}">Notícias</a></li>
-										<li><a href="{% url 'contacts' %}"> Contactos </a></li>
+										<li id="homeNav"><a href="{% url 'home' %}"> Home </a></li>
+										<li id="about_meNav"><a href="{% url 'about-me' %}">Sobre mim</a></li>
+										<li id="candidacyNav"><a href="{% url 'candidacy' %}"> Minha Candidatura </a></li>
+										<li id="faqsNav"><a href="{% url 'faq' %}">FAQ</a></li>
+										<li id="newsNav"><a href="{% url 'news' %}">Notícias</a></li>
+										<li id="contactsNav"><a href="{% url 'contacts' %}"> Contactos </a></li>
 									</ul>
 								</nav>
 							</div>

@@ -13,7 +13,7 @@
     <!-- Title -->
 	<title>Henriqueta Silva | {% block title %}{% endblock %}</title>
 
-	{% comment %} <link rel="icon" href="img/favicon.png"> {% endcomment %}
+	<link rel="icon" href="{% static 'assets/geral/img/carrocel2.png' %}">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
@@ -78,7 +78,7 @@
 	<!-- jquery Migrate JS -->
 	<script src="{% static 'assets/geral/js/jquery-migrate-3.0.0.js' %}"></script>
 	<!-- jquery Ui JS -->
-	<script src="{% static 'assets/geral/js/jquery-ui.min.js' %}' %}"></script>
+	<script src="{% static 'assets/geral/js/jquery-ui.min.js' %}"></script>
 	<!-- Easing JS -->
 	<script src="{% static 'assets/geral/js/easing.js' %}"></script>
 	<!-- Color JS -->
@@ -108,11 +108,12 @@
 	<!-- Magnific Popup JS -->
 	<script src="{% static 'assets/geral/js/jquery.magnific-popup.min.js' %}"></script>
 	<!-- Counter Up CDN JS -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js' %}"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 	<!-- Bootstrap JS -->
 	<script src="{% static 'assets/geral/js/bootstrap.min.js' %}"></script>
 	<!-- Main JS -->
 	<script src="{% static 'assets/geral/js/main.js' %}"></script>
+	{% block local_script %} {% endblock %}
 </body>
 
 </html>

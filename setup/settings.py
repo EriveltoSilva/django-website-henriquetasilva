@@ -123,11 +123,11 @@ MESSAGE_TAGS ={
     messages.WARNING: 'warning',
 }
 
-# EMAIL_HOST_USER = str(os.getenv('EMAIL_HOST_USER'))
-# EMAIL_HOST_PASSWORD = str(os.getenv('EMAIL_HOST_PASSWORD'))
-# EMAIL_USE_TLS = str(os.getenv('EMAIL_USE_TLS'))
-# EMAIL_PORT = str(os.getenv('EMAIL_PORT'))
-# EMAIL_HOST = str(os.getenv('EMAIL_HOST'))
+EMAIL_HOST_USER = str(os.getenv('EMAIL_HOST_USER'))
+EMAIL_HOST_PASSWORD = str(os.getenv('EMAIL_HOST_PASSWORD'))
+EMAIL_USE_TLS = str(os.getenv('EMAIL_USE_TLS'))
+EMAIL_PORT = str(os.getenv('EMAIL_PORT'))
+EMAIL_HOST = str(os.getenv('EMAIL_HOST'))
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

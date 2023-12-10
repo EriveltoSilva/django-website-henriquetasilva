@@ -48,14 +48,9 @@ Version:	1.1
 /*=============================
 	Global CSS 
 ===============================*/
-@font-face {
-	font-family: 'MyCentury';
-	src: url('assets/fonts/CenturyGothicPaneuropeanRegular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
+
 body{
-    font-family: 'MyCentury','Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 	font-weight: 400;
 	font-size:14px;
 	color:#888;

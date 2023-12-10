@@ -12,7 +12,7 @@
 
 {% block content %}
 	<!-- Breadcrumbs -->
-	<div class="breadcrumbs overlay index" style="background-image: url('assets/geral/img/jovem2.avif');">
+	<div class="breadcrumbs overlay index">
 		<div class="container">
 			<div class="bread-inner">
 				<div class="row">
@@ -41,26 +41,26 @@
 							<h2>Conte-nos as suas ideias</h2>
 							<p>Sozinhos conseguimos. Mas com você vamos mais longe.</p>
 							<!-- Form -->
-							<form class="form" method="post" action="">
+							<form class="form" method="post">
+								{% csrf_token %}
 								<div class="row">
-									<div class="col-lg-6 col-md-6 col-12">
+									<div class="col-lg-12 col-md-12 col-12">
+										{% include "partials/_alert.html" %}
+									</div>
+
+									<div class="col-lg-12 col-md-12 col-12">
 										<div class="form-group">
-											<input name="first_name" type="text" placeholder="Seu primeiro Nome">
+											<input name="name" type="text" placeholder="Seu Nome">
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-6 col-12">
-										<div class="form-group">
-											<input name="last_name" type="text" placeholder="Seu Sobrenome">
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6 col-12">
+									<div class="col-lg-12 col-md-12 col-12">
 										<div class="form-group">
 											<input name="email" type="email" placeholder="Email">
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-6 col-12">
+									<div class="col-lg-12 col-md-12 col-12">
 										<div class="form-group">
-											<input name="phone" type="tel" placeholder="Seu Telefone">
+											<input name="subject" type="text" placeholder="Assunto">
 										</div>
 									</div>
 

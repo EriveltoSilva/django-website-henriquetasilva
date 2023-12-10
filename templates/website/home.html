@@ -12,16 +12,14 @@
 
 {% block content %}
 	<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+		{% for image in carrocel %}
 		<div class="carousel-inner">
-			<div class="carousel-item active" data-bs-interval="5000">
-				<img src="assets/geral/img/thumbnails/carrocel1.png" class="d-block w-100" alt="...">
+			<div class="carousel-item" data-bs-interval="5000">
+				<img src="{{ image.image.url }}" class="d-block w-100" alt="{{ image.title }}">
 			</div>
 		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item " data-bs-interval="5000">
-				<img src="assets/geral/img/thumbnails/carrocel2.png" class="d-block w-100" alt="...">
-			</div>
-		</div>
+		{% endfor %}
+
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Previous</span>
@@ -59,32 +57,15 @@
 							realizou um estágio de advocacia pela Ordem de Advogados de Angola em Luanda, enriquecendo
 							ainda mais sua expertise.
 						</p>
-						<a href="about_me.html" class="btn text-light">
+						<a href="{% url 'about-me' %}" class="btn text-light">
 							Leia Mais
 							<i class="fa fa-long-arrow-right"></i>
 						</a>
 					</div>
 					<!-- End Choose Left -->
 				</div>
-				<div class="col-lg-6 col-12">
-
-					<!-- Start Choose Rights -->
-					<div class="choose-right" style="background-image:url('assets/geral/img/thumbnails/thumb-about_me.png');">
-						<div class="video-image">
-							<!-- Video Animation -->
-							<!-- <div class="promo-video">
-								<div class="waves-block">
-									<div class="waves wave-1"></div>
-									<div class="waves wave-2"></div>
-									<div class="waves wave-3"></div>
-								</div>
-							</div>
-							<a href="https://www.youtube.com/watch?v=Biic3zfCqe0"
-								class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a> -->
-							<!--/ End Video Animation -->
-						</div>
-					</div>
-					<!-- End Choose Rights -->
+				<div class="col-lg-6 col-12 ">
+					<img src="{{ image_about.image.url }}" alt="{{ image_about.title }}">
 				</div>
 			</div>
 		</div>
@@ -92,7 +73,7 @@
 	<!--/ End Why choose -->
 
 	<!-- Start Fun-facts -->
-	<div id="fun-facts" class="fun-facts index section overlay mt-2" style="background:url('assets/geral/img/lei.jpg');">
+	<div id="fun-facts" class="fun-facts index section overlay mt-2" style="background:url('static/assets/geral/img/lei.jpg');">
 		<div class="container ">
 			<div class="row justify-content-center">
 				<div class="col-lg-3 col-md-6 col-12">
@@ -152,7 +133,8 @@
 				<div class="col-lg-12">
 					<div class="section-title">
 						<h2>Minha Galeria de Imagens e Casos</h2>
-						<img src="assets/geral/img/section-img.png" alt="#">
+						<img src="{% static 'assets/geral/img/section-img.png' %}" alt="icone sinal electrico">
+
 						<p>Cada trabalho, cada caso, cada vida que mudei, foi um futuro que melhorei.</p>
 					</div>
 				</div>
@@ -162,38 +144,12 @@
 			<div class="row">
 				<div class="col-lg-12 col-12">
 					<div class="owl-carousel portfolio-slider">
+						{% for image in galeria %}
 						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto1.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
+							<img src="{{ image.image.url }}" alt="{{ image.title }}">
+							<a href="{{ image.image.url }}" class="btn">Ver</a>
 						</div>
-						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto2.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
-						</div>
-						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto3.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
-						</div>
-						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto4.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
-						</div>
-						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto5.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
-						</div>
-						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto6.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
-						</div>
-						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto7.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
-						</div>
-						<div class="single-pf">
-							<img src="assets/geral/img/galeria/foto8.jpg" alt="#">
-							<a href="portfolio-details.html" class="btn">View Details</a>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
@@ -209,64 +165,41 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="section-title">
-						<h2>Noticias Recentes.</h2>
-						<img src="assets/geral/img/section-img.png" alt="#">
+						<h2>Noticias Recentes</h2>
+						<img src="{% static 'assets/geral/img/section-img.png' %}" alt="#">
 						<p> A leitura é o passaporte para a sabedoria.</p>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-12">
-					<!-- Single Blog -->
-					<div class="single-news">
-						<div class="news-head">
-							<img src="assets/geral/img/advogado-cleinte.png" alt="#">
-						</div>
-						<div class="news-body">
-							<div class="news-content">
-								<div class="date ">22 Novembro, 2023</div>
-								<h2><a href="publication-single.html">Os beneficios de um ter um advogado de defesa.</a></h2>
-								<p class="text">
-									Ter um advogado de defesa oferece segurança jurídica e proteção dos direitos
-									fundamentais. Sua expertise técnica e compromisso garantem uma representação justa e
-									equitativa perante a lei. Além disso, um advogado de defesa é essencial para
-									orientar e assegurar que os procedimentos legais sejam seguidos, proporcionando
-									tranquilidade e assertividade durante processos judiciais.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- End Single Blog -->
-				</div>
 
+			<div class="row">
+
+				<!-- Single Blog -->
+				{% for new in news %}
 				<div class="col-lg-4 col-md-6 col-12">
-					<!-- Single Blog -->
 					<div class="single-news">
 						<div class="news-head">
-							<img src="assets/geral/img/advogado-cliente1.jpeg" alt="#">
+							<img src="{{ new.image_thumb.url }}" alt="{{ new.image_description }}">
 						</div>
 						<div class="news-body">
 							<div class="news-content">
-								<div class="date">1 Outubro, 2023</div>
+								<div class="date">{{ new.created_at }}</div>
 								<h2>
-									<a href="publication-single.html">
-										Palestra sobre "A importância de uma juventude activa na
-										sociedade".
+									<a href="{% url 'news-article' new.slug %}">
+										{{ new.title }}
 									</a>
 								</h2>
 								<p class="text">
-									Estar na Ordem dos Advogados oferece uma rede de suporte profissional e recursos
-									especializados. Os membros têm acesso a atualizações regulares sobre legislação e
-									jurisprudência, além de oportunidades de formação contínua. Pertencer à Ordem dos
-									Advogados também proporciona um ambiente colaborativo, permitindo troca de
-									conhecimentos e experiências com colegas, fortalecendo assim a prática e a ética
-									profissional.
+									{{ new.summary|safe }}
 								</p>
 							</div>
 						</div>
 					</div>
-					<!-- End Single Blog -->
 				</div>
+				{% endfor %}
+				<!-- End Single Blog -->
+
+
 			</div>
 		</div>
 	</section>
@@ -274,25 +207,7 @@
 
 
 
-	<!-- Start clients -->
-	<h2 class="text-center mb-1">Apoiadores e Parceiros</h2>
-	<div class="clients overlay index">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-12">
-					<div class="owl-carousel clients-slider">
-						<div class="single-clients">
-							<img src="assets/geral/img/ordem dos advogados.jpg" alt="#">
-						</div>
-						<div class="single-clients">
-							<img src="assets/geral/img/uan.jpeg" alt="#">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--/Ens clients -->
+
 
 	<!-- Start Appointment -->
 	<section class="appointment">
@@ -301,37 +216,37 @@
 				<div class="col-lg-12">
 					<div class="section-title">
 						<h2>Fale comigo e deixe-me ajuda-lo</h2>
-						<img src="assets/geral/img/section-img.png" alt="#">
+						<img src="{% static 'assets/geral/img/section-img.png' %}" alt="icone sinal electrico">
 						<p>Na frente de uma advogada, o problema mais complexo tem uma fácil solução</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-md-12 col-12">
-					<form class="form" method="post" action="">
+					<form class="form" method="post" action="{% url 'contacts' %}">
+						{% csrf_token %}
 						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12 mt-3">
+							<div class="col-lg-12 col-md-12 col-12">
+								{% include "partials/_alert.html" %}
+							</div>
+
+							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
-									<input name="first_name" type="text" placeholder="Seu primeiro Nome">
+									<input name="name" type="text" placeholder="Seu Nome">
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-12 mt-3">
-								<div class="form-group">
-									<input name="last_name" type="text" placeholder="Seu Sobrenome">
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12 mt-3">
+							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<input name="email" type="email" placeholder="Email">
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-12 mt-3">
+							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
-									<input name="phone" type="tel" placeholder="Seu Telefone">
+									<input name="subject" type="text" placeholder="Assunto">
 								</div>
 							</div>
 
-							<div class="col-lg-12 col-md-12 col-12 mt-3">
+							<div class="col-lg-12 col-md-12 col-12">
 								<div class="form-group">
 									<textarea name="message"
 										placeholder="Escreva uma mensagem para nós e entraremos em contacto consigo....."></textarea>
@@ -346,12 +261,11 @@
 								</div>
 							</div>
 						</div>
-
 					</form>
 				</div>
 				<div class="col-lg-6 col-md-12 ">
 					<div class="appointment-image">
-						<img src="assets/geral/img/carrocel2.png" alt="#">
+						<img src="{% static 'assets/geral/img/carrocel2.png' %}" alt="#">
 					</div>
 				</div>
 			</div>
@@ -394,3 +308,11 @@
 	<!-- /End Newsletter Area -->
 
 {% endblock  %}
+
+{% block local_script %}
+	<script>
+		window.addEventListener("load", ()=>{
+			document.querySelectorAll(".carousel-item")[0].classList.add("active")
+		})
+	</script>
+{% endblock %}

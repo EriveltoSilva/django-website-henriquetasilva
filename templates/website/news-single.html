@@ -2,263 +2,208 @@
 {% load static %}
 
 {% block metas %}
-	<meta name="keywords" content="Site keywords here">
-	<meta name="description" content="">
+<meta name="keywords" content="Site keywords here">
+<meta name="description" content="">
 {% endblock %}
 
 {% block title%}
-	Galeria de Imagens
+{{new.title}}
 {% endblock%}
 
 {% block content %}
 
-		<!-- Breadcrumbs -->
-		<div class="breadcrumbs overlay" style="background-image: url('assets/geral/img/lendo-um-caso.avif');">
-			<div class="container">
-				<div class="bread-inner">
-					<div class="row">
-						<div class="col-12">
-							<h2>Palestra sobre "A importância de uma juventude activa na
-								sociedade"</h2>
-							<!-- <ul class="bread-list">
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay" style="background-image: url('assets/geral/img/lendo-um-caso.avif');">
+	<div class="container">
+		<div class="bread-inner">
+			<div class="row">
+				<div class="col-12">
+					<h1>{{new.title}}</h1>
+					<!-- <ul class="bread-list">
 								<li><a href="index.html">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
 								<li class="active">Blog Single</li>
 							</ul> -->
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End Breadcrumbs -->
-		
-		<!-- Single News -->
-		<section class="news-single section">
-			<div class="container">
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Single News -->
+<section class="news-single section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-12">
 				<div class="row">
-					<div class="col-lg-8 col-12">
-						<div class="row">
-							<div class="col-12">
-								<div class="single-main">
-									<!-- News Head -->
-									<div class="news-head">
-										<img src="assets/geral/img/palestra.jpg" alt="#">
-									</div>
-									<!-- News Title -->
-									<h1 class="news-title">
-										<a href="news-single.html">
-											Palestra sobre "A importância de uma juventude activa na sociedade" .
+					<div class="col-12">
+						<div class="single-main">
+							<!-- News Head -->
+							<div class="news-head">
+								<img src="{{ new.image_thumb.url }}" alt="{{new.image_description}}">
+							</div>
+							<!-- News Title -->
+							<!-- <h2 class="news-title">
+								<a href="news-single.html">
+								</a>
+							</h2> -->
+							<!-- Meta -->
+							<div class="meta">
+								<div class="meta-left">
+									<span class="author">
+										<a href="#">
+											Autor:{{new.author.get_full_name}}
+											<img src="" alt="" style="visibility: hidden;">
 										</a>
-									</h1>
-									<!-- Meta -->
-									<div class="meta">
-										<div class="meta-left">
-											<span class="author"><a href="#"><img src="assets/geral/img/henriqueta.png" alt="#">Henriqueta Silva</a></span>
-											<span class="date"><i class="fa fa-clock-o"></i>1 Outubro, 2023</span>
-										</div>
-										<div class="meta-right">
-											<span class="comments"><a href="#"><i class="fa fa-comments"></i>05 Comentários</a></span>
-											<span class="views"><i class="fa fa-eye"></i>33K Visualizações</span>
-										</div>
-									</div>
-									<!-- News Text -->
-									<div class="news-text">
-										<p>
-											Nesta palestra, discutimos a essencial e transformadora influência da juventude ativa na sociedade contemporânea. Abordaremos como o engajamento, a participação e o protagonismo dos jovens são elementos-chave para o desenvolvimento social, econômico e político.
-										</p>
-										<p>Empoderamento e Engajamento: Destacaremos a importância de capacitar os jovens para se tornarem agentes de mudança positiva. Mostraremos como seu envolvimento ativo em questões sociais, políticas e comunitárias pode gerar impactos significativos.
-
-											Inovação e Perspectivas Futuras: Exploraremos como a juventude traz consigo ideias inovadoras e uma mentalidade aberta para enfrentar desafios contemporâneos. Analisaremos como suas perspectivas influenciam e impulsionam mudanças em diversos setores da sociedade.
-											
-											Construção de uma Sociedade Mais Justa e Equitativa: Examinaremos como a atuação da juventude pode promover a inclusão, a diversidade e a igualdade, contribuindo para a construção de uma sociedade mais justa e equitativa para todos.
-											
-											Participação Cívica e Responsabilidade Social: Destacaremos a importância da participação cívica ativa dos jovens e seu compromisso com a responsabilidade social, encorajando-os a se envolverem ativamente no processo de tomada de decisões.</p>
-										<div class="image-gallery">
-											<div class="row">
-												<div class="col-lg-6 col-md-6 col-12">
-													<div class="single-image">
-														<img src="assets/geral/img/palestra.jpg" alt="#">
-													</div>
-												</div>
-												<div class="col-lg-6 col-md-6 col-12">
-													<div class="single-image">
-														<img src="assets/geral/img/plestra2.jpg" alt="#">
-													</div>
-												</div>
-											</div>
-										</div>
-										<p>Nossa juventude é um recurso valioso e dinâmico para o progresso e a evolução de nossa sociedade. Encerraremos a palestra enfatizando a necessidade contínua de apoiar, capacitar e inspirar os jovens a se tornarem agentes de mudança, reconhecendo o poder transformador de suas ações na construção de um futuro melhor para todos.
-
-											Esta palestra destaca a importância da juventude ativa na sociedade, enfatizando seu papel na promoção de mudanças positivas e no desenvolvimento de uma comunidade mais inclusiva e dinâmica.</p>
-										<blockquote class="overlay">
-											<p>Só com uma juventude mais inclusa a sociendade pode se desenvolver no maior grau e atingir o seu potencial máximo</p>					
-										</blockquote>
-										<p>Impacto na Vida dos Jovens:
-
-											Após a palestra sobre o papel crucial da juventude na sociedade, testemunhamos uma inspiradora onda de ação entre os participantes. Muitos jovens expressaram um renovado senso de propósito, buscando oportunidades para se envolverem ativamente em suas comunidades. Observamos grupos formando-se para discutir questões locais, iniciativas para promover a inclusão e a igualdade, além de projetos inovadores para enfrentar desafios específicos. O impacto foi palpável, com jovens assumindo um papel ativo na construção de um futuro mais promissor</p>
-										<p>Transformação e Engajamento Contínuo:
-
-											Além do momento imediato após a palestra, testemunhamos uma transformação contínua entre os participantes. A semente do engajamento e da responsabilidade social foi plantada, e muitos desses jovens continuam a se envolver ativamente em suas comunidades. Vimos líderes emergirem, iniciativas sendo implementadas e um espírito colaborativo florescer entre eles. A palestra não foi apenas um evento isolado, mas o início de uma jornada de compromisso e ação que continua a influenciar positivamente suas vidas e o mundo ao seu redor.</p>
-									</div>
-									<div class="blog-bottom">
-										<!-- Social Share -->
-										<ul class="social-share">
-											<li class="facebook"><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-											<li class="twitter"><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-											<li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-											<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-											<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-										</ul>
-										<!-- Next Prev -->
-										<ul class="prev-next">
-											<li class="prev"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-											<li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-										</ul>
-										<!--/ End Next Prev -->
-									</div>
+									</span>
+									<span class="date"><i class="fa fa-clock-o"></i>{{new.created_at}}</span>
+								</div>
+								<div class="meta-right">
+									<span class="comments">
+										<a href="#">
+											<i class="fa fa-comments"></i>
+											{{ num_comments }}
+										</a>
+									</span>
+									{% comment %}
+									<span class="views"><i class="fa fa-eye"></i>33K Visualizações</span>
+									{% endcomment %}
 								</div>
 							</div>
-							<div class="col-12">
-								<div class="blog-comments">
-									<h2>Todos os comentários</h2>
-									<div class="comments-body">
-										<!-- Single Comments -->
-										<div class="single-comments">
-											<div class="main">
-												<div class="head">
-													<img src="assets/geral/img/jovem1.jpg" alt="#"/>
-												</div>
-												<div class="body">
-													<h4>Marcolino Camunga</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>Novembro 05, 2023</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>Só uma palavra: "Incrivel"</p>
-													<!-- <a href="#"><i class="fa fa-reply"></i>replay</a> -->
-												</div>
+							<!-- News Text -->
+							<div class="news-text">
+								{{new.content|safe}}
+							</div>
+							{% comment %}
+							<!-- 
+										<div class="blog-bottom">
+											<ul class="social-share">
+												<li class="facebook"><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+												<li class="twitter"><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+												<li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+												<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+												<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+												<ul class="prev-next">
+													<li class="prev"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+													<li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+												</ul>
+											</ul> 
+										</div>
+									-->
+							{% endcomment %}
+						</div>
+					</div>
+
+					<div class="col-12">
+						<div class="blog-comments">
+							<h2>Todos os comentários</h2>
+							<div class="comments-body">
+								<!-- Single Comments -->
+								{% for comment in comments %}
+								<div class="single-comments">
+									<div class="main">
+
+										<div class="body">
+											<h4>{{comment.name}}</h4>
+											<div class="comment-meta">
+												<span class="meta">
+													<i class="fa fa-calendar"></i>
+													{{comment.created_at}}
+												</span>
 											</div>
-										</div>		
-										<!--/ End Single Comments -->
-										<!-- Single Comments -->
-										<div class="single-comments left">
-											<div class="main">
-												<div class="head">
-													<img src="assets/geral/img/jovem2.avif" alt="#"/>
-												</div>
-												<div class="body">
-													<h4>João Baptista</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>Novembro 08, 2023</span><span class="meta"><i class="fa fa-clock-o"></i>10:06 AM</span></div>
-													<p>Aprendi imenso e sem dúvdas mudou a minha forma de pensar</p>
-												</div>
-											</div>
-										</div>		
-										<!--/ End Single Comments -->
-										<!-- Single Comments -->
-										<div class="single-comments">
-											<div class="main">
-												<div class="head">
-													<img src="assets/geral/img/jovem3.avif" alt="#"/>
-												</div>
-												<div class="body">
-													<h4>Venick Guilherme</h4>
-													<div class="comment-meta"><span class="meta"><i class="fa fa-calendar"></i>Novembro 11, 2023</span><span class="meta"><i class="fa fa-clock-o"></i>03:38 AM</span></div>
-													<p>
-														A advogada falou de muitos pontos em que nós jovens podemmos actuar para mudar o rumo do país.
-													</p>
-													<!-- <a href="#"><i class="fa fa-reply"></i>replay</a> -->
-												</div>
-											</div>
-										</div>		
-										<!--/ End Single Comments -->											
+											<p>{{comment.content}}</p>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-12">
-								<div class="comments-form">
-									<h2>Deixa o seu  Comentário</h2>
-									<!-- Contact Form -->
-									<form class="form" method="post" action="">
-										<div class="row">
-											<div class="col-lg-4 col-md-4 col-12">
-												<div class="form-group">
-													<i class="fa fa-user"></i>
-													<input type="text" name="first_name" placeholder="Primeiro Nome" required="required">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-4 col-12">
-												<div class="form-group">
-													<i class="fa fa-envelope"></i>
-													<input type="text" name="last_name" placeholder="Sobrenome" required="required">
-												</div>
-											</div>
-											<div class="col-lg-4 col-md-4 col-12">
-												<div class="form-group">
-													<i class="fa fa-envelope"></i>
-													<input type="email" name="email" placeholder="Seu email" required="required">
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="form-group message">
-													<i class="fa fa-pencil"></i>
-													<textarea name="message" rows="7" placeholder="Seu comentário" ></textarea>
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="form-group button">	
-													<button type="submit" class="btn primary"><i class="fa fa-send"></i>Comentar</button>
-												</div>
-											</div>
-										</div>
-									</form>
-									<!--/ End Contact Form -->
-								</div>
+								{% endfor %}
+
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-12">
-						<div class="main-sidebar">
-							<!-- Single Widget -->
-							<div class="single-widget search">
-								<div class="form">
-									<input type="email" placeholder="Pesquise aqui...">
-									<a class="button" href="#"><i class="fa fa-search"></i></a>
-								</div>
-							</div>
-							<!--/ End Single Widget -->
-							<!-- Single Widget -->
-							<div class="single-widget category">
-								<h3 class="title">Categorias de Publicações</h3>
-								<ul class="categor-list">
-									<li><a href="#">Código Penal</a></li>
-									<li><a href="#">Palestras</a></li>
-									<li><a href="#">Casos de Estudo</a></li>
-									<li><a href="#">Lei Geral</a></li>
-									<li><a href="#">Sociedade</a></li>
-								</ul>
-							</div>
-							<!--/ End Single Widget -->
-							<!-- Single Widget -->
-							<div class="single-widget recent-post">
-								<h3 class="title">Publicações Recentes
-								</h3>
-								<!-- Single Post -->
-								<div class="single-post">
-									<div class="image">
-										<img src="assets/geral/img/palestra.jpg" alt="#">
+					<div class="col-12">
+						<div class="comments-form">
+							<h2>Deixa o seu Comentário</h2>
+							<!-- Contact Form -->
+							<form class="form" method="post">
+								{% csrf_token %}
+								<div class="row">
+									<div class="col-lg-4 col-md-4 col-12">
+										<div class="form-group">
+											<i class="fa fa-user"></i>
+											<input type="text" name="name" placeholder="Seu Nome" required="required">
+										</div>
 									</div>
-									<div class="content">
-										<h5><a href="#">Os beneficios de um ter um advogado de defesa.</a></h5>
-										<ul class="comment">
-											<li><i class="fa fa-calendar" aria-hidden="true"></i>22 Novembro, 2023</li>
-											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>4</li>
-										</ul>
+									<div class="col-lg-4 col-md-4 col-12">
+										<div class="form-group">
+											<i class="fa fa-envelope"></i>
+											<input type="email" name="email" placeholder="Seu email"
+												required="required">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group message">
+											<i class="fa fa-pencil"></i>
+											<textarea name="comment" rows="7" placeholder="Seu comentário"></textarea>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group button">
+											<button type="submit" class="btn primary"><i
+													class="fa fa-send"></i>Comentar</button>
+										</div>
 									</div>
 								</div>
-								<!-- End Single Post -->
-							</div>
-							<!--/ End Single Widget -->
+							</form>
+							<!--/ End Contact Form -->
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!--/ End Single News -->
-		{% endblock %}
+			<div class="col-lg-4 col-12">
+				<div class="main-sidebar">
+					<!-- Single Widget -->
+					<div class="single-widget search">
+						<div class="form">
+							<input type="email" placeholder="Pesquise aqui...">
+							<a class="button" href="#"><i class="fa fa-search"></i></a>
+						</div>
+					</div>
+					<!--/ End Single Widget -->
+					<!-- Single Widget -->
+					<div class="single-widget category">
+						<h3 class="title">Categorias de Publicações</h3>
+						<ul class="categor-list">
+							{% for category in categories %}
+								<li><a href="{% url 'filter-category-new' category.slug %}">{{ category.title }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+					<!--/ End Single Widget -->
+					<!-- Single Widget -->
+					<div class="single-widget recent-post">
+						<h3 class="title">Publicações Recentes
+						</h3>
+						<!-- Single Post -->
+						<div class="single-post">
+							<div class="image">
+								<img src="assets/geral/img/palestra.jpg" alt="#">
+							</div>
+							<div class="content">
+								<h5><a href="#">Os beneficios de um ter um advogado de defesa.</a></h5>
+								<ul class="comment">
+									<li><i class="fa fa-calendar" aria-hidden="true"></i>22 Novembro, 2023</li>
+									<li><i class="fa fa-commenting-o" aria-hidden="true"></i>4</li>
+								</ul>
+							</div>
+						</div>
+						<!-- End Single Post -->
+					</div>
+					<!--/ End Single Widget -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Single News -->
+{% endblock %}

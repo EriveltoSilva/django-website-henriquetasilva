@@ -329,3 +329,8 @@ Version:	1.1
 	
 	
 })(jQuery);
+
+window.addEventListener("load", ()=>{
+    const pageName = document.getElementById("inputPageName").value;
+    document.getElementById(pageName+"Nav").classList.add("active")
+})
