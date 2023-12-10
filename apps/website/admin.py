@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import FrequentQuestion, Team
 from .models import NewsCategory, New
+from .models import FrequentQuestion, Team
 from .models import Contact, Galeria, Carrocel
 
 class ListFrequentQuestionAdmin(admin.ModelAdmin):
@@ -10,15 +10,12 @@ class ListFrequentQuestionAdmin(admin.ModelAdmin):
 
     prepopulated_fields = {"slug":("question",)}
 
-
-
 class ListTeamAdmin(admin.ModelAdmin):
-    list_display = ['id', "name","num_hierarquical", "function", "published", "created_at",]
-    list_display_links = ["id", "name","function", "created_at"]
-    list_filter = ["id", "name", "function","created_at"]
+    list_display = ['id', "name","num_hierarquical",  "published", "created_at",]
+    list_display_links = ["id", "name","created_at"]
+    list_filter = ["id", "name", "created_at"]
 
-    prepopulated_fields = {"image_description":("name",)}
-
+    prepopulated_fields = {"slug":("name",), "image_description":("name",)}
 
 class ListNewsCategories(admin.ModelAdmin):
     list_display = ('id', 'title', 'published','author', 'created_at')

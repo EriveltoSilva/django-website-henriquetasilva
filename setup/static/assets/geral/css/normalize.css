@@ -426,7 +426,7 @@ Preloader Area CSS
 }
 /* #1A76D1; */
 .btn {
-	color: #fff;
+	color: var(--yellow-color);
 	padding: 13px 25px;
 	font-size: 14px;
 	text-transform: capitalize;
@@ -446,7 +446,10 @@ Preloader Area CSS
 	border-radius:4px;
 }
 .btn:hover{
-	color:#fff;
+	/* color:#fff; */
+	color: var(--yellow-color);
+	
+	
 }
 .btn:before{
 	content: "";
@@ -456,7 +459,8 @@ Preloader Area CSS
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: #1A76D1;
+	/* background: #1A76D1; */
+	background: linear-gradient(45deg,#275587, #1A76D1 );
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	-webkit-transform-origin: 50%;
@@ -568,7 +572,7 @@ Preloader Area CSS
 	display: inline-block;
 }
 /* Pagination CSS */
-.pagination {
+/* .pagination {
 	text-align: left;
 	margin: 50px 0 0 0;
 	display:block;
@@ -604,7 +608,7 @@ Preloader Area CSS
 .blog-grids.pagination{
 	margin-top:50px;
 	text-align:center;
-}
+} */
 
 /*--------------------------------------------------------------
 # Elements

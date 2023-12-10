@@ -75,14 +75,35 @@
 				
 			</div>
 		</div>
+
+		<div class="pagination d-flex justify-content-center">
+			<ul>
+			  {% if news.has_previous %}
+			  <li>
+				  <a href="?page={{ news.previous_page_number }}">
+					  <i class="fa-solid fa-arrow-left"></i>
+				</a>
+			  </li>
+			  {% endif %}
+	
+			  <li class="active">
+				<a href="#"> {{news.number }} de {{ news.paginator.num_pages }} </a>
+			  </li>
+	
+			  {% if news.has_next %}
+			  <li>
+				<a href="?page={{ news.next_page_number }}">
+				  <i class="fa-solid fa-arrow-right"></i>
+				</a>
+			  </li>
+			  {% endif %}
+			</ul>
+		  </div><!-- End pagination -->
 	</section>
 	<!-- End Blog Area -->
 {% endblock %}
 
+
 {% block local_script %}
-<script>
-	window.addEventListener("load", ()=>{
-		document.querySelectorAll(".carousel-item")[0].classList.add("active")
-	})
-</script>
+	<script src="{% static 'assets/geral/js/carrocel.js' %}"></script>
 {% endblock %}

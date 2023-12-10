@@ -60,21 +60,6 @@ class New(models.Model):
     # def get_absolute_url(self):
     #     return reverse('news-detail', args=[str(self.id)])
 
-class Team(models.Model):
-    name = models.CharField(max_length=150, null=False, blank=False)
-    function = models.CharField(max_length=200, default="")
-    num_hierarquical= models.IntegerField(null=False, blank=False, default=0)
-    image = models.ImageField(upload_to="website/team/", blank=False)
-    image_description = models.CharField(max_length=100, default="")
-    published = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        ordering = ["num_hierarquical","name"]
-
-    def __str__(self) -> str:
-        return f"{self.name}"
     
 class Contact(models.Model):
     name = models.CharField(max_length=150)
@@ -132,3 +117,29 @@ class Comment(models.Model):
 
     def __str__(self) -> str:
         return f"Comentário do {self.name}"
+    
+class NewletterAssinature(models.Model):
+    email = models.EmailField(max_length=100, blank=False, null=False, unique=True)    
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self) -> str:
+        return f"{self.email}"
+    
+
+class Team(models.Model):
+    name = models.CharField(max_length=150, null=False, blank=False)
+    slug = models.SlugField(default="")
+    # function = models.CharField(max_length=200, default="")
+    num_hierarquical= models.IntegerField(null=False, blank=False, default=0)
+    image = models.ImageField(upload_to="website/team/", blank=False)
+    image_description = models.CharField(max_length=100, default="")
+    content = RichTextUploadingField(default="")
+    published = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["num_hierarquical","name"]
+
+    def __str__(self) -> str:
+        return f"{self.name}"

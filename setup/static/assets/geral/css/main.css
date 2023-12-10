@@ -10,6 +10,41 @@
 }
 
 .bg-primary{
-    /* background-color: var(--dark-blue-color)!important; */
     background:linear-gradient(45deg,#1A76D1 ,#275587);
 } 
+
+.pagination {
+    margin-top: 30px;
+    color: var(--yellow-color);
+}
+
+.pagination ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pagination li {
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.pagination li a {
+    color: var(--blue-color);
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination li.active,
+.pagination li:hover {
+    background: var(--blue-color);
+    color: var(--yellow-color);
+}
+
+.pagination li.active a,
+.pagination li:hover a {
+    color: var(--yellow-color);
+}

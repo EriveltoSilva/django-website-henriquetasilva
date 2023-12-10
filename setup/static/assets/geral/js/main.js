@@ -191,18 +191,18 @@ Version:	1.1
 		/*====================================
 			Single Portfolio Slider JS
 		======================================*/ 
-		$('.pf-details-slider').owlCarousel({
-			items:1,
-			autoplay:false,
-			autoplayTimeout:5000,
-			smartSpeed: 400,
-			autoplayHoverPause:true,
-			loop:true,
-			merge:true,
-			nav:true,
-			dots:false,
-			navText: ['<i class="icofont-rounded-left"></i>', '<i class="icofont-rounded-right"></i>'],
-		});
+		// $('.pf-details-slider').owlCarousel({
+		// 	items:1,
+		// 	autoplay:false,
+		// 	autoplayTimeout:5000,
+		// 	smartSpeed: 400,
+		// 	autoplayHoverPause:true,
+		// 	loop:true,
+		// 	merge:true,
+		// 	nav:true,
+		// 	dots:false,
+		// 	navText: ['<i class="icofont-rounded-left"></i>', '<i class="icofont-rounded-right"></i>'],
+		// });
 		
 		/*===================
 			Accordion JS

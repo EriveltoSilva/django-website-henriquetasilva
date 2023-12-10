@@ -119,10 +119,12 @@
                 
                 {% for member in team_members%}
                 <div class="col-lg-3 col-md-6 col-12 m-2">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{ member.image.url }}" class="card-img-top" alt="{{member.image_description}}">
+                    <div class="card">
+                        <a href="{% url 'team-member-detail' member.slug %}">
+                            <img src="{{ member.image.url }}" class="card-img-top" alt="{{member.image_description}}">
+                        </a>
                         <div class="card-body bg-primary ">
-                            <h5 class="card-title text-center text-light">{{member.function}}</h5>
+                            <!-- <h5 class="card-title text-center text-light"></h5> -->
                             <p class="card-text text-center text-warning">{{member.name}}</p>
                         </div>
                     </div>
@@ -147,10 +149,8 @@
     </section>
 
     {% endblock%}
-    {% block local_script %}
-	<script>
-		window.addEventListener("load", ()=>{
-			document.querySelectorAll(".carousel-item")[0].classList.add("active")
-		})
-	</script>
+
+
+{% block local_script %}
+	<script src="{% static 'assets/geral/js/carrocel.js' %}"></script>
 {% endblock %}
